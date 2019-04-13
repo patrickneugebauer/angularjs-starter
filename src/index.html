@@ -3,7 +3,11 @@
     <title>angularjs-starter</title>
   </head>
   <body ng-app="app">
-    <hello-world></hello-world>
+    <ui-view></ui-view>
+    <br>
+    <a ui-sref="hello" ui-sref-active="active">Hello</a>
+    <a ui-sref="goodbye" ui-sref-active="active">Goodbye</a>
+    <a ui-sref="react" ui-sref-active="active">React</a>
   </body>
   <script src="app.js"></script>
 </html>
