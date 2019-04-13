@@ -1,4 +1,13 @@
+import { css } from 'emotion';
+
 import { StateService } from './state.service';
+
+const style = css`
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  margin: 1rem;
+  padding: 0.25rem;
+`;
 
 export class HelloWorldComponent {
   static $inject = ['stateService'];
@@ -9,5 +18,5 @@ export class HelloWorldComponent {
 export const helloWorldComponentConfig = {
   controller: HelloWorldComponent,
   controllerAs: 'vm',
-  template: `<span>Message: {{vm.message}}</span>`
+  template: `<span class="${style}">Message: {{vm.message}}</span>`
 };
