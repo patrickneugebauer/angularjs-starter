@@ -3,8 +3,8 @@ import { UI_ROUTER_REACT_HYBRID } from '@uirouter/react-hybrid';
 
 import { LogService } from '@services/log-service/log.service';
 import { StateService } from '@services/state-service/state.service';
-import { helloWorldComponentConfig } from '@components/hello-world/hello-world.component';
-import { goodbyeWorldComponentConfig } from '@components/goodbye-world/goodbye-world.component';
+import { helloWorldComponentConfig, HelloWorldComponent } from '@components/hello-world/hello-world.component';
+import { goodbyeWorldComponentConfig, GoodbyeWorldComponent } from '@components/goodbye-world/goodbye-world.component';
 import { HelloReact } from '@components/hello-react/hello-react';
 
 angular
@@ -13,18 +13,18 @@ angular
     $stateProvider.state({
       name: 'hello',
       url: '/',
-      component: 'helloWorld'
+      component: HelloWorldComponent.displayName
     }).state({
       name: 'goodbye',
       url: '/bye',
-      component: 'goodbyeWorld'
+      component: GoodbyeWorldComponent.displayName
     }).state({
       name: 'react',
       url: '/react',
       component: HelloReact
     });
   })
-  .service('logService', LogService)
-  .service('stateService', StateService)
-  .component('helloWorld', helloWorldComponentConfig)
-  .component('goodbyeWorld', goodbyeWorldComponentConfig);
+  .service(LogService.displayName, LogService)
+  .service(StateService.displayName, StateService)
+  .component(HelloWorldComponent.displayName, helloWorldComponentConfig)
+  .component(GoodbyeWorldComponent.displayName, goodbyeWorldComponentConfig);

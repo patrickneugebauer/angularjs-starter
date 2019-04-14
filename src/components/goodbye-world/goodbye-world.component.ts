@@ -1,7 +1,8 @@
 import { StateService } from '@services/state-service/state.service';
 
 export class GoodbyeWorldComponent {
-  static $inject = ['stateService'];
+  static $inject = [StateService.displayName];
+  static displayName = 'goodbyeWorldComponent';
   message = this.stateService.farewell;
   constructor(private stateService: StateService) {}
 };

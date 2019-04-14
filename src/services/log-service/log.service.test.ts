@@ -1,6 +1,5 @@
 import angular from 'angular';
 require('angular-mocks');
-require('@app');
 
 import { LogService } from './log.service';
 
@@ -11,7 +10,7 @@ describe('logService', function() {
 
   beforeAll(angular.mock.module('app'));
   beforeAll(inject(($injector: angular.auto.IInjectorService) => {
-    service = $injector.get('logService');
+    service = $injector.get(LogService.displayName);
   }));
 
   afterAll(() => {

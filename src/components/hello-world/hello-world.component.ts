@@ -10,7 +10,8 @@ const style = css`
 `;
 
 export class HelloWorldComponent {
-  static $inject = ['stateService'];
+  static $inject = [StateService.displayName];
+  static displayName = 'helloWorldComponent';
   message = this.stateService.greeting;
   constructor(private stateService: StateService) {}
 };

@@ -23,5 +23,8 @@ module.exports = {
     "@app": "<rootDir>/app.ts",
     "@components/(.*)": "<rootDir>/components/$1",
     "@services/(.*)": "<rootDir>/services/$1"
-  }
+  },
+  "setupFiles": [
+    "./setup.ts"
+  ]
 }

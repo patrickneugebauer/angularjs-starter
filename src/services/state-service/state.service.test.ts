@@ -1,6 +1,5 @@
 import angular from 'angular';
 require('angular-mocks');
-require('@app');
 
 import { StateService } from './state.service';
 
@@ -11,7 +10,7 @@ describe('stateService', function() {
 
   beforeAll(angular.mock.module('app'));
   beforeAll(inject(($injector: angular.auto.IInjectorService) => {
-    service = $injector.get('stateService');
+    service = $injector.get(StateService.displayName);
   }));
 
   afterAll(() => {
