@@ -1,4 +1,4 @@
-import { StateService } from '../../services/state.service';
+import { StateService } from '@services/state-service/state.service';
 
 export class GoodbyeWorldComponent {
   static $inject = ['stateService'];

@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 
-import { StateService } from '../../services/state.service';
+import { StateService } from '@services/state-service/state.service';
 
 const style = css`
   border: 1px solid black;

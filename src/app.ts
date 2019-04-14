@@ -1,12 +1,11 @@
 import angular from 'angular';
 import { UI_ROUTER_REACT_HYBRID } from '@uirouter/react-hybrid';
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-import { StateService } from './services/state.service';
-import { helloWorldComponentConfig } from './components/hello-world/hello-world.component';
-import { goodbyeWorldComponentConfig } from './components/goodbye-world/goodbye-world.component';
-import { HelloReact } from './components/hello-react/hello-react';
+import { LogService } from '@services/log-service/log.service';
+import { StateService } from '@services/state-service/state.service';
+import { helloWorldComponentConfig } from '@components/hello-world/hello-world.component';
+import { goodbyeWorldComponentConfig } from '@components/goodbye-world/goodbye-world.component';
+import { HelloReact } from '@components/hello-react/hello-react';
 
 angular
   .module('app', ['ui.router', UI_ROUTER_REACT_HYBRID])
@@ -25,6 +24,7 @@ angular
       component: HelloReact
     });
   })
+  .service('logService', LogService)
   .service('stateService', StateService)
   .component('helloWorld', helloWorldComponentConfig)
   .component('goodbyeWorld', goodbyeWorldComponentConfig);

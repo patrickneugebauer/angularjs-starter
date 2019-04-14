@@ -1,9 +1,12 @@
+// Basic TypeScript + Jest setup taken from:
 // https://basarat.gitbooks.io/typescript/docs/testing/jest.html
 
+// Jest config documentation
+// https://jestjs.io/docs/en/configuration
+
 module.exports = {
-  "roots": [
-    "./src"
-  ],
+  "rootDir": "./src",
+  "roots": [],
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
   },
@@ -16,4 +19,9 @@ module.exports = {
     "json",
     "node"
   ],
+  "moduleNameMapper": {
+    "@app": "<rootDir>/app.ts",
+    "@components/(.*)": "<rootDir>/components/$1",
+    "@services/(.*)": "<rootDir>/services/$1"
+  }
 }

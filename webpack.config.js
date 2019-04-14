@@ -1,6 +1,17 @@
+// typescript setup
 // https://webpack.js.org/guides/typescript/
+
+// webpack-dev-server setup
 // https://webpack.js.org/configuration/dev-server/
+
+// plugin to copy index.html form src -> dist
 // https://webpack.js.org/plugins/copy-webpack-plugin/
+
+// add path aliases in typescript
+// https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping
+
+// add path aliases in webpack
+// https://webpack.js.org/configuration/resolve/#resolvealias
 
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -24,7 +35,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts', '.js' ],
+    alias: {
+      "@app": path.resolve(__dirname, 'src/app'),
+      "@components": path.resolve(__dirname, 'src/components'),
+      "@services": path.resolve(__dirname, 'src/services'),
+    }
   },
   output: {
     filename: 'app.js',

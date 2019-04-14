@@ -1,16 +1,22 @@
 import angular from 'angular';
 require('angular-mocks');
-import { $injector } from '@uirouter/core';
-require('../app');
+require('@app');
 
 import { StateService } from './state.service';
 
 describe('stateService', function() {
   let service: StateService;
-  beforeEach(angular.mock.module('app'));
-  beforeEach(inject(($injector) => {
+
+  angular.mock.module.sharedInjector();
+
+  beforeAll(angular.mock.module('app'));
+  beforeAll(inject(($injector: angular.auto.IInjectorService) => {
     service = $injector.get('stateService');
   }));
+
+  afterAll(() => {
+    service = null;
+  });
 
   test('greeting', () => {
     expect(typeof service.greeting).toBe('string');
