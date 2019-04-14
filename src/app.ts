@@ -3,10 +3,10 @@ import { UI_ROUTER_REACT_HYBRID } from '@uirouter/react-hybrid';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { StateService } from './state.service';
-import { helloWorldComponentConfig } from './hello-world.component';
-import { goodbyeWorldComponentConfig } from './goodbye-world.component';
-import { HelloWorld } from './hello-world';
+import { StateService } from './services/state.service';
+import { helloWorldComponentConfig } from './components/hello-world/hello-world.component';
+import { goodbyeWorldComponentConfig } from './components/goodbye-world/goodbye-world.component';
+import { HelloReact } from './components/hello-react/hello-react';
 
 angular
   .module('app', ['ui.router', UI_ROUTER_REACT_HYBRID])
@@ -22,7 +22,7 @@ angular
     }).state({
       name: 'react',
       url: '/react',
-      component: HelloWorld
+      component: HelloReact
     });
   })
   .service('stateService', StateService)
