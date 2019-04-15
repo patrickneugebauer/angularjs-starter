@@ -25,5 +25,6 @@ export const helloWorldComponentConfig = {
 export const helloWorldRouteConfig = {
   name: 'hello',
   url: '/hello',
+  parent: 'nav',
   component: HelloWorldComponent.displayName
 };

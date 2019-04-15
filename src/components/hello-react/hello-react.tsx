@@ -12,5 +12,6 @@ export class HelloReact extends React.Component {
 export const helloReactRouteConfig = {
   name: 'react',
   url: '/react',
+  parent: 'nav',
   component: HelloReact
 }

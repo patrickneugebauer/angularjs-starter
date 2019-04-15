@@ -13,8 +13,9 @@ export const goodbyeWorldComponentConfig = {
   template: `<span>Message: {{vm.message}}</span>`
 };
 
-export const goodbyeWorldRouteComfig = {
+export const goodbyeWorldRouteConfig = {
   name: 'goodbye',
   url: '/goodbye',
+  parent: 'nav',
   component: GoodbyeWorldComponent.displayName
 }
