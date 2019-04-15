@@ -21,3 +21,9 @@ export const helloWorldComponentConfig = {
   controllerAs: 'vm',
   template: `<span class="${style}">Message: {{vm.message}}</span>`
 };
+
+export const helloWorldRouteConfig = {
+  name: 'hello',
+  url: '/hello',
+  component: HelloWorldComponent.displayName
+};

@@ -24,7 +24,7 @@ module.exports = {
     "@components/(.*)": "<rootDir>/components/$1",
     "@services/(.*)": "<rootDir>/services/$1"
   },
-  "setupFiles": [
+  "setupFilesAfterEnv": [
     "./setup.ts"
   ]
 }

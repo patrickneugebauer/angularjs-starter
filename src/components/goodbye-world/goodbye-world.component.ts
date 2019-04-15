@@ -12,3 +12,9 @@ export const goodbyeWorldComponentConfig = {
   controllerAs: 'vm',
   template: `<span>Message: {{vm.message}}</span>`
 };
+
+export const goodbyeWorldRouteComfig = {
+  name: 'goodbye',
+  url: '/goodbye',
+  component: GoodbyeWorldComponent.displayName
+}

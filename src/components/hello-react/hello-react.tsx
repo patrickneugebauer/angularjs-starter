@@ -8,3 +8,9 @@ export class HelloReact extends React.Component {
     return <span>Hello from React</span>;
   }
 }
+
+export const helloReactRouteConfig = {
+  name: 'react',
+  url: '/react',
+  component: HelloReact
+}
