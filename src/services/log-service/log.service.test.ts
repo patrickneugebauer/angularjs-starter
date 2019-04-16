@@ -1,13 +1,14 @@
-import { LogService } from './log.service';
+import angular from 'angular';
+import 'angular-mocks';
 
-// import { get } from 'lodash-es'
-// get({a:1}, 'a')
-
-// import { DateTime } from 'luxon';
+import { LogService, servicesModule } from '@services';
 
 describe('logService', function() {
   let service: LogService;
 
+  angular.mock.module.sharedInjector();
+
+  beforeAll(angular.mock.module(servicesModule.name));
   beforeAll(inject(($injector: angular.auto.IInjectorService) => {
     service = $injector.get(LogService.displayName);
   }));

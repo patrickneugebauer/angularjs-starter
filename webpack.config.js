@@ -38,8 +38,9 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ],
     alias: {
       "@app": path.resolve(__dirname, 'src/app'),
-      "@components": path.resolve(__dirname, 'src/components'),
-      "@services": path.resolve(__dirname, 'src/services'),
+      "@components": path.resolve(__dirname, 'src/components/components'),
+      "@features": path.resolve(__dirname, 'src/features/features'),
+      "@services": path.resolve(__dirname, 'src/services/services'),
     }
   },
   output: {

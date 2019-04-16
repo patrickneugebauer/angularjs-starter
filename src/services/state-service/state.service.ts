@@ -1,4 +1,4 @@
-import { LogService } from '@services/log-service/log.service';
+import { LogService } from '@services';
 
 export class StateService {
   static $inject = [LogService.displayName];

@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 
-import { StateService } from '@services/state-service/state.service';
+import { StateService } from '@services';
 
 const style = css`
   border: 1px solid black;
@@ -20,11 +20,4 @@ export const helloWorldComponentConfig = {
   controller: HelloWorldComponent,
   controllerAs: 'vm',
   template: `<span class="${style}">Message: {{vm.message}}</span>`
-};
-
-export const helloWorldRouteConfig = {
-  name: 'hello',
-  url: '/hello',
-  parent: 'nav',
-  component: HelloWorldComponent.displayName
 };

@@ -14,9 +14,3 @@ export const navComponentConfig = {
     <a ui-sref="react" ui-sref-active="active">React</a>
   `
 };
-
-export const navRouteConfig = {
-  name: 'nav',
-  url: '/nav',
-  component: NavComponent.displayName
-}

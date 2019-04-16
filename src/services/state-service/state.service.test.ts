@@ -1,8 +1,14 @@
-import { StateService } from './state.service';
+import angular from 'angular';
+import 'angular-mocks';
+
+import { StateService, servicesModule } from '@services';
 
 describe('stateService', function() {
   let service: StateService;
 
+  angular.mock.module.sharedInjector();
+
+  beforeAll(angular.mock.module(servicesModule.name));
   beforeAll(inject(($injector: angular.auto.IInjectorService) => {
     service = $injector.get(StateService.displayName);
   }));

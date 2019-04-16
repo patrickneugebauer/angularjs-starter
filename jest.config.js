@@ -21,10 +21,8 @@ module.exports = {
   ],
   "moduleNameMapper": {
     "@app": "<rootDir>/app.ts",
-    "@components/(.*)": "<rootDir>/components/$1",
-    "@services/(.*)": "<rootDir>/services/$1"
-  },
-  "setupFilesAfterEnv": [
-    "./setup.ts"
-  ]
+    "@components": "<rootDir>/components/components.ts",
+    "@features": "<rootDir>/features/features.ts",
+    "@services": "<rootDir>/services/services.ts"
+  }
 }

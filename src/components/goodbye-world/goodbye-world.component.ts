@@ -1,4 +1,4 @@
-import { StateService } from '@services/state-service/state.service';
+import { StateService } from '@services';
 
 export class GoodbyeWorldComponent {
   static $inject = [StateService.displayName];
@@ -12,10 +12,3 @@ export const goodbyeWorldComponentConfig = {
   controllerAs: 'vm',
   template: `<span>Message: {{vm.message}}</span>`
 };
-
-export const goodbyeWorldRouteConfig = {
-  name: 'goodbye',
-  url: '/goodbye',
-  parent: 'nav',
-  component: GoodbyeWorldComponent.displayName
-}
